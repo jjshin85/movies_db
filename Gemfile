@@ -22,6 +22,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'autoprefixer-rails'
+
+gem 'pry-rails'
+
+gem 'react-rails'
+
+gem 'responders'
+
+gem 'better_errors'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
