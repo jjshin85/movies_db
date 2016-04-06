@@ -1,3 +1,3 @@
 class Movie < ActiveRecord::Base
-  belongs_to :library
+  has_many :library_movies
 end

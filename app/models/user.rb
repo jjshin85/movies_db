@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_many :sent_requests, class_name: "FriendRequest", foreign_key: :sender_id
   has_many :received_requests, class_name: "FriendRequest", foreign_key: :recipient_id
-  has_many :movies, through: :libraries
+  has_many :libraries
+  has_many :movies, through: :library_movies
 
   has_secure_password
 
