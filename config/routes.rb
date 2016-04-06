@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
-  resources :users
   resources :movies
-  resources :libraries
+
+  resources :users do
+    resources :libraries
+  end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
