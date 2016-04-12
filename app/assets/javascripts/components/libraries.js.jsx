@@ -15,7 +15,7 @@ var Library = React.createClass({
 
   mixins: [SetIntervalMixin],
   getInitialState: function(){
-    return {seconds: 0,  libraries: this.props.libraries};
+    return {seconds: 0,  libraries: this.props.libraries, user_id: this.props.user_id};
   },
 
   componentDidMount: function(){
@@ -24,7 +24,7 @@ var Library = React.createClass({
 
   libraries: function(){
     $.ajax({
-      url: "/users/" + {this.props.user.id} + "/libraries",
+      url: "/users/" + this.props.user_id + "/libraries",
       dataType: 'json',
       type: 'GET',
       cache: false,
@@ -36,9 +36,12 @@ var Library = React.createClass({
   },
 
   render: function() {
+
      return (<ul>{this.state.libraries.map(function (key, value){
         return <li className="library" key={key.id} >
-          <p className='library_title'>{key.title}</p>
+          <a href={'/users/' + key.user_id + '/libraries/' + key.id}>
+            <p className='library_name'>{key.name}</p>
+          </a>
         </li>;
       })}
     </ul>)

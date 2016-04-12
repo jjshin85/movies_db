@@ -1,3 +1,5 @@
-<h1>Welkommen</h1>
-<p><%= @user.first_name %></p>
-<% react_component('Library', { libraries: @libraries, user: @user %>
+<div class="col-md-9">
+  <h1>Welkommen</h1>
+  <p><%= @user.first_name %></p>
+  <%= react_component('Library', { libraries: @libraries }) %>
+</div>

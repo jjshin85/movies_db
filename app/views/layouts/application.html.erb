@@ -8,8 +8,9 @@
 
 </head>
 <body>
-
-<%= yield %>
-
+  <%= render template: "layouts/_navbar"%>
+  <div class="col-md-9" id="main-content">
+    <%= yield %>
+  </div>
 </body>
 </html>
