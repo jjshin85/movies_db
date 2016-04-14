@@ -31,5 +31,9 @@ libraries.each do |library|
   Library.create(library)
 end
 
-LibraryMovie.create(library: Library.first, movie: Movie.first, user: User.first)
-4.
+5.times do |i|
+  rand_num = Random.new
+  library = Library.find(rand_num.rand(1..4))
+  user = library.user
+  LibraryMovie.create( library: library, user: user, movie: Movie.find(rand_num.rand(1..3)) )
+end
