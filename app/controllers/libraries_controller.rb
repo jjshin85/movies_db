@@ -10,10 +10,11 @@ class LibrariesController < ApplicationController
 
   def show
     @user_id = params[:user_id]
-    @library = Library.find(params[:id])
-    @libraryMovies = @library.movies
+    @library_id = params[:id]
+    library = Library.find(@library_id)
+    @movies = library.movies
     if request.xhr?
-      render json: { libraryMovies: @libraryMovies }
+      render json: @movies
     end
   end
 
