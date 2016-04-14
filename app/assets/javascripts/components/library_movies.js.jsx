@@ -15,7 +15,7 @@ var LibraryMovie = React.createClass({
 
   mixins: [SetIntervalMixin],
   getInitialState: function(){
-    return {seconds: 0,  library: this.props.library, user_id: this.props.user_id};
+    return { seconds: 0, libraryMovies: this.props.libraryMovies, library: this.props.library};
   },
 
   componentDidMount: function(){
@@ -24,7 +24,7 @@ var LibraryMovie = React.createClass({
 
   libraryMovies: function(){
     $.ajax({
-      url: "/users/" + this.props.user_id + "/libraries/" + this.props.id,
+      url: "/users/" + this.props.library.user_id + "/libraries/" + this.props.library.id,
       dataType: 'json',
       type: 'GET',
       cache: false,
