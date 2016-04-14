@@ -25,10 +25,11 @@ friend_requests.each do |request|
 end
 
 
-libraries = [{user: User.first, name: "Badassery"}, {user: User.first, name: "Embarrassing Flicks"}, {user: User.find(2), name: "Action Movies"}]
+libraries = [{user: User.first, name: "Badassery"}, {user: User.first, name: "Embarrassing Flicks"}, {user: User.first, name: "Action Movies"}, {user: User.find(2), name: "Horror"}]
 
 libraries.each do |library|
   Library.create(library)
 end
 
 LibraryMovie.create(library: Library.first, movie: Movie.first, user: User.first)
+4.
