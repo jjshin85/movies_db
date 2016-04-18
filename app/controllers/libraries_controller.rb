@@ -2,9 +2,9 @@ class LibrariesController < ApplicationController
 
   def index
     @user_id = params[:user_id]
-    libraries = Library.where(user_id: @user_id)
+    @libraries = Library.where(user_id: @user_id)
     if request.xhr?
-      render json: { libraries: @libraries }
+      render json: @libraries
     end
   end
 
