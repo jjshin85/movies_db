@@ -1,5 +1,6 @@
 <div class="col-md-9">
   <h1>Welkommen</h1>
   <p><%= @user.first_name %></p>
-  <%= react_component('Library', { libraries: @libraries }) %>
+  <%= react_component('Library', { libraries: @libraries, user_id: @user_id }) %>
 </div>
+<div id="test"></div>

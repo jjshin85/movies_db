@@ -30,7 +30,7 @@ var Library = React.createClass({
       cache: false,
       success: function(data){
         console.log(data);
-        this.setState({libraries: data});
+        this.setState({ libraries: data });
       }.bind(this)
     });
   },
