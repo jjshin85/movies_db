@@ -1,6 +1,6 @@
 var BASE_URL = "https://api.themoviedb.org/3";
 var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/w500";
-var API_KEY = "?api_key=57a0094feba8795fd8cd00ca9f2c8001"
+var API_KEY = ENV["API_KEY"];
 
 $(document).ready(function(){
     $.get(BASE_URL + "/search/movie" + API_KEY, onSuccess);
