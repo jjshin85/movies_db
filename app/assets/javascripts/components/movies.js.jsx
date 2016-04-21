@@ -1,3 +1,6 @@
+var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+var image_size_sm = "w154";
+
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
@@ -19,7 +22,7 @@ var Movie = React.createClass({
   },
 
   componentDidMount: function(){
-    this.setInterval(this.movies, 5000);
+    this.setInterval(this.movies, 100000000);
   },
 
   movies: function(){
@@ -36,14 +39,16 @@ var Movie = React.createClass({
   },
 
   render: function() {
-     return (<ul>{this.state.movies.map(function (key, value){
-        return <li className="movie_div" key={key.id} >
-          <p className='movie_title'>{key.title}</p>
-          <p className="movie_description">{key.description}</p>
-          <p className='movie_release_year'>{key.release_year}</p>
-          <img className='movie_image' src={key.image_url}/>
-        </li>;
+     return (<div class='container'>{this.state.movies.map(function (key, value){
+        return <div class='movie'>
+          <div className="col-xs-6 col-sm-3" key={key.id} >
+            <img className='movie_image' src={BASE_IMAGE_URL + image_size_sm + key.poster_path}/>
+            <p className='movie_title'>{key.title}</p>
+            <p className="movie_overview">{key.overview}</p>
+            <p className='movie_release_date'>{key.release_date}</p>
+            </div>
+          </div>;
       })}
-    </ul>)
+    </div>)
   }
 });
