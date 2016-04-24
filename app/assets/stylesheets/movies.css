@@ -1,0 +1,9 @@
+.movie {
+  overflow: scroll;
+  height: 350px;
+  margin: 5px;
+}
+.movie_overview {
+  display: none;
+}
+

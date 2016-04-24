@@ -38,16 +38,18 @@ var Movie = React.createClass({
     });
   },
 
-  render: function() {
-     return (<div class='container'>{this.state.movies.map(function (key, value){
-        return <div class='movie'>
-          <div className="col-xs-6 col-sm-3" key={key.id} >
-            <img className='movie_image' src={BASE_IMAGE_URL + image_size_sm + key.poster_path}/>
-            <p className='movie_title'>{key.title}</p>
-            <p className="movie_overview">{key.overview}</p>
-            <p className='movie_release_date'>{key.release_date}</p>
-            </div>
-          </div>;
+  render: function()
+  {
+    return (<div className='container'>{this.state.movies.map(function (key, value)
+      {
+      return <div className="col-xs-6 col-sm-3" key={key.id} >
+                <div className='movie'>
+                  <img className='movie_image' src={BASE_IMAGE_URL + image_size_sm + key.poster_path}/>
+                  <h4 className='movie_title'>{key.title}</h4>
+                  <p className="movie_overview">{key.overview}</p>
+                  <h5 className='movie_release_date'>{key.release_date}</h5>
+                </div>
+              </div>;
       })}
     </div>)
   }
