@@ -1,5 +1,5 @@
 var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
-var image_size_sm = "w154";
+var image_size_sm = "w300";
 
 var SetIntervalMixin = {
   componentWillMount: function() {
@@ -44,7 +44,9 @@ var Movie = React.createClass({
       {
       return <div className="col-xs-6 col-sm-3" key={key.id} >
                 <div className='movie'>
-                  <img className='movie_image' src={BASE_IMAGE_URL + image_size_sm + key.poster_path}/>
+                  <div className='image_container'>
+                    <img className='movie_image' src={BASE_IMAGE_URL + image_size_sm + key.poster_path}/>
+                  </div>
                   <h4 className='movie_title'>{key.title}</h4>
                   <p className="movie_overview">{key.overview}</p>
                   <h5 className='movie_release_date'>{key.release_date}</h5>
