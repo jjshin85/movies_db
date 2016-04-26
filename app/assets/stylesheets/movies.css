@@ -11,15 +11,14 @@ body {
 img {
   height: 420px;
   width: 280px;
-  margin: auto;
 }
 
 .img_container {
   height: 280px;
   width: 280px;
 }
-.movie:hover {
-  background: #282829
+.img_container:hover {
+  background: #282829;
 }
 
 .movie_overview {
