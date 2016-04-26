@@ -1,0 +1,45 @@
+body {
+  font-family: "Helvetica";
+}
+.movie {
+  overflow: scroll;
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+}
+
+img {
+  height: 420px;
+  width: 280px;
+  margin: auto;
+}
+
+.img_container {
+  height: 280px;
+  width: 280px;
+}
+.movie:hover {
+  background: #282829
+}
+
+.movie_overview {
+  top: 5px;
+  position: absolute;
+  display: none;
+  color: #ECECF0;
+  padding: 10px;
+  overflow: scroll;
+  height: 80%;
+}
+
+.movie_title {
+  display: none;
+  font-size: 1.7em;
+  text-shadow: 2px #646466;
+  /*-webkit-text-stroke: 1px #646466;*/
+  position: absolute;
+  bottom: 0;
+  color: #ECECF0;
+  padding: 10px;
+  height: 20%
+}
