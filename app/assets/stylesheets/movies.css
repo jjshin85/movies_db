@@ -1,7 +1,11 @@
 .movie {
   overflow: scroll;
-  height: 350px;
+  height: 275px;
+  width: 275px;
   margin: 5px;
+}
+.movie:hover {
+  background-color: #901611;
 }
 .movie_overview {
   display: none;
