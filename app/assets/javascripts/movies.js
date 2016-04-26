@@ -7,7 +7,7 @@ $(document).ready(function(){
       var overview = movie.children('.movie_overview');
       overview.css('display', 'inherit');
 
-      movie.children('.movie_image').css('opacity', .25);
+      movie.children('.image_container').css('opacity', .5);
     });
     $('#main-content').on('mouseleave', '.movie', function(e){
       var movie = $(this);
@@ -17,7 +17,7 @@ $(document).ready(function(){
       var overview = movie.children('.movie_overview');
       overview.css('display', 'none');
 
-      movie.children('.movie_image').css('opacity', 1);
+      movie.children('.image_container').css('opacity', 1);
 
     });
 });
