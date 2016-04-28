@@ -7,18 +7,25 @@ body {
   width: 300px;
   margin: 10px;
 }
-
+.image_container {
+  position: absolute;
+  top: 10px;
+  height: 280px;
+  width: 280px;
+  overflow: hidden;
+}
 img {
+  position: absolute;
+  top: 10px;
   height: 420px;
   width: 280px;
 }
 
-.img_container {
+.background_overlay {
   height: 280px;
   width: 280px;
-}
-.img_container:hover {
-  background: black;
+  background-color: black;
+  opacity: 0;
 }
 
 .movie_overview {

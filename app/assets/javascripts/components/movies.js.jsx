@@ -44,8 +44,9 @@ var Movie = React.createClass({
       {
       return <div className="col-xs-6 col-sm-3" key={key.id} >
                 <div className='movie'>
+                  <div className='background_overlay'></div>
                   <div className='image_container'>
-                    <img className='movie_image' src={BASE_IMAGE_URL + image_size_sm + key.poster_path}/>
+                    <img className='movie_image' src={ BASE_IMAGE_URL + image_size_sm + key.poster_path }/>
                   </div>
                   <h4 className='movie_title'>{key.title}</h4>
                   <p className="movie_overview">{key.overview}</p>

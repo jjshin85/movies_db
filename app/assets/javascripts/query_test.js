@@ -10,8 +10,6 @@ $(document).ready(function(){
 
     var image_url = BASE_IMAGE_URL + image_size + "/6bCplVkhowCjTHXWv49UjRPn0eK.jpg";
 
-
-
     $.get(image_url, function(data){
     });
 });
@@ -34,4 +32,3 @@ function onSuccess(data){
   // });
   // console.log(movie_data);
 }
-
