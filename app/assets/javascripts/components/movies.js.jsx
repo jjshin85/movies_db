@@ -42,15 +42,15 @@ var Movie = React.createClass({
   {
     return (<div className='container'>{this.state.movies.map(function (key, value)
       {
-      return <div className="col-xs-6 col-sm-3" key={key.id} >
+        // col-xs-7, col-sm-6 col-md-4
+      return <div className="col-md-4" key={key.id} >
                 <div className='movie'>
                   <div className='background_overlay'></div>
                   <div className='image_container'>
                     <img className='movie_image' src={ BASE_IMAGE_URL + image_size_sm + key.poster_path }/>
                   </div>
-                  <h4 className='movie_title'>{key.title}</h4>
                   <p className="movie_overview">{key.overview}</p>
-                  <h5 className='movie_release_date'>{key.release_date}</h5>
+                  <h4 className='movie_title'>{key.title}</h4>
                 </div>
               </div>;
       })}

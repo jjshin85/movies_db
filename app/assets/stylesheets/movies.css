@@ -1,11 +1,14 @@
 body {
   font-family: "Helvetica";
 }
+
+
 .movie {
   overflow: hidden;
   height: 300px;
   width: 300px;
-  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .image_container {
   position: absolute;
@@ -13,24 +16,33 @@ body {
   height: 280px;
   width: 280px;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
 }
 img {
   position: absolute;
-  top: 10px;
+  top: 0;
   height: 420px;
   width: 280px;
 }
 
 .background_overlay {
+  position: absolute;
+  top: 10px;
   height: 280px;
   width: 280px;
   background-color: black;
   opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
 }
 
 .movie_overview {
-  top: 5px;
   position: absolute;
+  top: 10px;
+  width: 280px;
   display: none;
   color: #ECECF0;
   padding: 10px;
@@ -40,12 +52,12 @@ img {
 
 .movie_title {
   display: none;
+  width: 280px;
+  padding: 10px;
   font-size: 1.7em;
   text-shadow: 2px #646466;
-  /*-webkit-text-stroke: 1px #646466;*/
   position: absolute;
   bottom: 0;
   color: #ECECF0;
-  padding: 10px;
   height: 20%
 }
