@@ -53,11 +53,14 @@ img {
 .movie_title {
   display: none;
   width: 280px;
-  padding: 10px;
-  font-size: 1.7em;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: 1.4em;
   text-shadow: 2px #646466;
   position: absolute;
   bottom: 0;
   color: #ECECF0;
-  height: 20%
+  height: 15%;
+  overflow: hidden;
+
 }
