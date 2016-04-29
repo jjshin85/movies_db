@@ -1,6 +1,10 @@
 <div id="movies">
 <h1>Movies:</h1>
-
+<div id="searchbar"></div>
+<%= form_tag("/search", method: "get") do %>
+  <%= text_field_tag(:movie_query) %>
+  <%= submit_tag("Search") %>
+<% end %>
   <%= react_component('Movie', { movies: @movies }) %>
 
 </div>
