@@ -9,14 +9,17 @@ function onMovieHover(){
       var movie = $(this);
       var title = movie.children('.movie_title');
       var overview = movie.children('.movie_overview');
+      var image_container = movie.children('.image_container');
+      // var image = movie.children('.movie_image');
       var image = movie.children('.image_container').children('img');
       var overlay = movie.children('.background_overlay');
       if(e.type == 'mouseenter')
       {
+        console.log(image_container);
+        console.log(image);
         title.css('display', 'inherit');
         overview.css('display', 'inherit');
-        // movie.children('.image_container').css('opacity', '.25');
-        image.css('opacity', .25);
+        image.css('opacity', .5);
         overlay.css('opacity', .5);
       }
       else{
