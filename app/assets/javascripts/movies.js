@@ -15,8 +15,6 @@ function onMovieHover(){
       var overlay = movie.children('.background_overlay');
       if(e.type == 'mouseenter')
       {
-        console.log(image_container);
-        console.log(image);
         title.css('display', 'inherit');
         overview.css('display', 'inherit');
         image.css('opacity', .5);

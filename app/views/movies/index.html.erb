@@ -1,7 +1,7 @@
 <div id="movies">
 <h1>Movies:</h1>
 <div id="searchbar"></div>
-<%= form_tag("/search", method: "get") do %>
+<%= form_tag("/search", method: "get", id:'search_query') do %>
   <%= text_field_tag(:movie_query) %>
   <%= submit_tag("Search") %>
 <% end %>

@@ -1,34 +1,38 @@
 var BASE_URL = "https://api.themoviedb.org/3";
 var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 var API_KEY;
-var query = "?query=toy+story"
+var query = "?";
+var image_size = "w92";
 $(document).ready(function(){
-    var image_size = "w92"
-    API_KEY = "";
-    var url = BASE_URL + "/movie/popular" + "?" + API_KEY;
-    $.get(url, onSuccess);
 
-    var image_url = BASE_IMAGE_URL + image_size + "/6bCplVkhowCjTHXWv49UjRPn0eK.jpg";
+    API_KEY = 'api_key=57a0094feba8795fd8cd00ca9f2c8001';
+    var url = BASE_URL + "/search/movie" + "?" + API_KEY;
+    $('#search_query').on('submit', function(e){
+      e.preventDefault();
 
-    $.get(image_url, function(data){
-    });
+      var movie_query = '&query=' + $('#movie_query').val();
+      movie_query = movie_query.replace(" ", "+");
+      url += movie_query;
+      console.log(url);
+      console.log("query results:");
+      $.get(url, onSuccess);
+    })
+
 });
 
 function onSuccess(data){
-  // console.log(data);
-  // var movie_data = "";
-  // data.results.forEach(function(element){
-  //   movie_data += "{";
-  //   movie_data += "original_title: " + '\"' + element.original_title + '\",';
-  //   movie_data += "overview: " + '\"' + element.overview+ '\",';
-  //   movie_data += "title: " + '\"' + element.title+ '\",';
-  //   movie_data += "moviedb_id: " + element.id+ ',';
-  //   movie_data += "vote_count: " + element.vote_count+ ',';
-  //   movie_data += "vote_average: " + element.vote_average+ ',';
-  //   movie_data += "poster_path: " + '\"' + element.poster_path+ '\",';
-  //   movie_data += "release_date: " + '\"' + element.release_date+ '\",';
-  //   movie_data += "original_language: " + '\"' + element.original_language+ '\"';
-  //   movie_data += "},"
-  // });
-  // console.log(movie_data);
+  console.log(data);
+  $('.col-md-4').empty();
+  data.results.forEach(function(element){
+    var html_element = "";
+    html_element += "<div class='col-md-4' key="+element.id + ">";
+    html_element += "<div class='movie'>";
+    html_element += "<div class='background_overlay'></div>";
+    html_element += "<div class='image_container'><img class='movie_image' src="+BASE_IMAGE_URL + image_size_sm + element.poster_path+"/></div>";
+    html_element += "<p class='movie_overview'>"+element.overview+"</p>";
+    html_element += "<h4 class='movie_title'>" + element.title + "</h4>";
+    html_element += "</div></div>";
+
+    $('#movies').append(html_element);
+  });
 }

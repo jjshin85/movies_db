@@ -1,4 +1,6 @@
 var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+var BASE_URL = "https://api.themoviedb.org/3";
+var API_KEY;
 var image_size_sm = "w300";
 
 var SetIntervalMixin = {
