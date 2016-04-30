@@ -1,21 +1,31 @@
 var BASE_URL = "https://api.themoviedb.org/3";
 var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 var API_KEY;
-var query = "?query=toy+story"
+var query = "?";
 $(document).ready(function(){
     var image_size = "w92"
-    API_KEY = "";
-    var url = BASE_URL + "/movie/popular" + "?" + API_KEY;
-    $.get(url, onSuccess);
+    API_KEY;
+    var url = BASE_URL + "/search/movie" + "?" + API_KEY;
+    $('#search_query').on('submit', function(e){
+      e.preventDefault();
 
-    var image_url = BASE_IMAGE_URL + image_size + "/6bCplVkhowCjTHXWv49UjRPn0eK.jpg";
+      var movie_query = '&query=' + $('#movie_query').val();
+      movie_query = movie_query.replace(" ", "+");
+      url += movie_query;
+      console.log(url);
+      console.log("query results:");
+      $.get(url, onSuccess);
+    })
 
-    $.get(image_url, function(data){
-    });
+
+    // var image_url = BASE_IMAGE_URL + image_size + "/6bCplVkhowCjTHXWv49UjRPn0eK.jpg";
+    //
+    // $.get(image_url, function(data){
+
 });
 
 function onSuccess(data){
-  // console.log(data);
+  console.log(data);
   // var movie_data = "";
   // data.results.forEach(function(element){
   //   movie_data += "{";

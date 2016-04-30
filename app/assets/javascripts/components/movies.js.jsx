@@ -1,4 +1,4 @@
-var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+
 var image_size_sm = "w300";
 
 var SetIntervalMixin = {
