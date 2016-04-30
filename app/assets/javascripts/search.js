@@ -5,7 +5,7 @@ var query = "?";
 var image_size = "w92";
 $(document).ready(function(){
 
-    API_KEY = 'api_key=57a0094feba8795fd8cd00ca9f2c8001';
+    API_KEY;
     var url = BASE_URL + "/search/movie" + "?" + API_KEY;
     $('#search_query').on('submit', function(e){
       e.preventDefault();
