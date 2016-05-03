@@ -2,9 +2,11 @@
 <h1>Movies:</h1>
 <div id="searchbar"></div>
 <%= form_tag("/search", method: "get", id:'search_query') do %>
-  <%= text_field_tag(:movie_query) %>
-  <%= submit_tag("Search") %>
+  <fieldset class="form-group">
+    <label for="movie_query">Search:</label>
+    <input type="text" class="form-control" id="movie_query" placeholder="Enter Movie Title">
+  </fieldset>
 <% end %>
+</form>
   <%= react_component('Movie', { movies: @movies }) %>
-
 </div>
