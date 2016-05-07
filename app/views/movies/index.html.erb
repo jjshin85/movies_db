@@ -1,12 +1,14 @@
 <div id="movies">
 <h1>Movies:</h1>
-<div id="searchbar"></div>
-<%= form_tag("/search", method: "get", id:'search_query') do %>
-  <fieldset class="form-group">
-    <label for="movie_query">Search:</label>
-    <input type="text" class="form-control" id="movie_query" placeholder="Enter Movie Title">
-  </fieldset>
-<% end %>
+<div id="searchbar">
+  <%= react_component ('SearchQuery') %> 
+</div>
+<!-- # <%= form_tag("/search", method: "get", id:'search_query') do %>
+#   <fieldset class="form-group">
+#     <label for="movie_query">Search:</label>
+#     <input type="text" class="form-control" id="movie_query" placeholder="Enter Movie Title">
+#   </fieldset>
+# <% end %> -->
 </form>
   <%= react_component('Movie', { movies: @movies }) %>
 </div>
