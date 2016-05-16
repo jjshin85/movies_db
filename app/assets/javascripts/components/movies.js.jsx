@@ -1,6 +1,4 @@
-  var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
-var BASE_URL = "https://api.themoviedb.org/3";
-var API_KEY;
+var BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 var image_size_sm = "w300";
 
 var SetIntervalMixin = {
@@ -24,23 +22,23 @@ var Movie = React.createClass({
   },
 
   componentDidMount: function(){
-    this.setInterval(this.movies, 10000000000);
+    this.setInterval(this.movies, 3000);
   },
 
   movies: function(){
     $.ajax({
-      url: "http://www.omdbapi.com/?s=mad+max",
+      url: "/movies",
       dataType: 'json',
       type: 'GET',
       cache: false,
       success: function(data){
-        this.setState({movies: data.Search});
+        this.setState({movies: data});
       }.bind(this)
     });
   },
   render: function()
   {
-    return (<div className='movies_container'>{this.state.movies.map(function (key, value)
+    return (<div className='movies_container'>{this.props.movies.map(function (key, value)
       {
         return <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12" key={key.id} >
                 <div className='movie'>
@@ -59,52 +57,31 @@ var Movie = React.createClass({
       })}
     </div>)
   }
-  // render: function()
-  // {
-  //   return (<div className='container'>{this.state.movies.map(function (key, value)
-  //       {
-  //         return <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12" key={key.imdbID}>
-  //           <div className='movie'>
-  //             <div className='background_overlay'></div>
-  //             <div className='image_container'>
-  //               <img className='movie_image' src={ key.Poster }/>
-  //             </div>
-  //             <div className='text_container'>
-  //               // <p className="movie_overview">{key.overview}</p>
-  //               <div className="title_area">
-  //                 <h4 className='movie_title'>{key.Title}</h4>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>;
-  //       })}
-  //     </div>)
-  // }
 });
 
 var SearchQuery = React.createClass({
   getInitialState: function(){
-    return {
-      search_query: ''
-    }
+    return { partial_query: '', final_query: '' }
   },
   updateSearchQuery: function(e){
     this.setState({
-      search_query: e.target.value
+      partial_query: e.target.value
     });
   },
   handleQuery: function(){
     this.setState({
-      search_query: ''
+      final_query: this.state.partial_query,
+      partial_query: ''
     });
   },
   render: function(){
     return (
         <div>
-          <input type="text" value={this.state.search_query} onChange={this.updateSearchQuery} />
+          <input type="text" value={this.state.partial_query} onChange={this.updateSearchQuery} />
           <button onClick={this.handleQuery}>Search</button>
           <p>test</p>
-          <p>{this.state.search_query}</p>
+          <p>partial: {this.state.partial_query}</p>
+          <p>final: {this.state.final_query}</p>
         </div>
     );
   }
