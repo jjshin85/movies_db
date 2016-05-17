@@ -3,11 +3,13 @@ class MoviesController < ApplicationController
   respond_to :html, :json
 
   def index
-    url = "#{BASE_URL}/movie/popular?#{API_KEY}"
-
+    if params[:query]
+      url = "#{BASE_URL}/search/movie?query=#{params[:query]}&#{API_KEY}"
+    else
+      url = "#{BASE_URL}/movie/popular?#{API_KEY}"
+    end
     response = HTTParty.get(url).parsed_response
     @movies = response["results"]
-
     if request.xhr?
       render json: { movies: @movies }
     end

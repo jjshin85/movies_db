@@ -18,16 +18,20 @@ var Movie = React.createClass({
 
   mixins: [SetIntervalMixin],
   getInitialState: function(){
-    return {seconds: 0,  movies: this.props.movies };
+    return { seconds: 0,  movies: this.props.movies };
   },
 
   componentDidMount: function(){
-    this.setInterval(this.movies, 3000);
+    this.setInterval(this.movies, 3000000000);
   },
 
-  movies: function(){
+  movies: function(query){
+    var url;
+    if(query != null){
+      url = "/movies?query=" + query.replace(" ", "+");
+    }
     $.ajax({
-      url: "/movies",
+      url: url || "/movies",
       dataType: 'json',
       type: 'GET',
       cache: false,
@@ -36,9 +40,14 @@ var Movie = React.createClass({
       }.bind(this)
     });
   },
+
+  handleSearch: function(query){
+    this.props.addNew(this.state.newFriend);
+  },
+
   render: function()
   {
-    return (<div className='movies_container'>{this.props.movies.map(function (key, value)
+    return (<div className='movies_container'>{ this.state.movies.map(function (key, value)
       {
         return <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12" key={key.id} >
                 <div className='movie'>
@@ -61,18 +70,14 @@ var Movie = React.createClass({
 
 var SearchQuery = React.createClass({
   getInitialState: function(){
-    return { partial_query: '', final_query: '' }
+    return { userInput: '' }
   },
   updateSearchQuery: function(e){
-    this.setState({
-      partial_query: e.target.value
-    });
+    this.setState({ userInput: e.target.value });
   },
   handleQuery: function(){
-    this.setState({
-      final_query: this.state.partial_query,
-      partial_query: ''
-    });
+    this.props.query(this.state.userInput);
+    this.setState({ userInput: '' });
   },
   render: function(){
     return (
