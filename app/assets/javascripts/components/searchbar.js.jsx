@@ -13,8 +13,6 @@ var SearchBar = React.createClass({
     return (<div id="searchBar">
           <input type="text" value={this.state.userInput} onChange={this.updateSearchQuery} />
           <button onClick={this.handleSetQuery}>Search</button>
-          <p>test</p>
-          <p>partial: {this.state.userInput}</p>
         </div>
     );
   }

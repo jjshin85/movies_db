@@ -24,7 +24,6 @@ var MoviesContainer = React.createClass({
 
   render: function(){
     return (<div>
-        <p>from container, query: {this.state.query}</p>
         <SearchBar setQuery={this.setSearchQuery}/>
         <MovieList movies={this.state.movies} />
       </div>);
