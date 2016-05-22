@@ -14,6 +14,7 @@ var SearchBar = React.createClass({
       <div className="col-lg-8 col-md-8 col-sm-8" id="searchbar">
         <div className="input-group">
           <input type="text"
+            id="searchbox"
             className="form-control"
             placeholder="Search for movie..."
             value={this.state.userInput}
@@ -21,6 +22,7 @@ var SearchBar = React.createClass({
             />
           <span className="input-group-btn">
             <button className="btn btn-default"
+              id="search-button"
               type="button" onClick={this.handleSetQuery}
               >Search</button>
           </span>
