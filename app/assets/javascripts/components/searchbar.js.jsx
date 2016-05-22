@@ -10,10 +10,23 @@ var SearchBar = React.createClass({
       this.setState({ userInput: '' });
   },
   render: function(){
-    return (<div id="searchBar">
-          <input type="text" value={this.state.userInput} onChange={this.updateSearchQuery} />
-          <button onClick={this.handleSetQuery}>Search</button>
+    return (<div className="row">
+      <div className="col-lg-8 col-md-8 col-sm-8" id="searchbar">
+        <div className="input-group">
+          <input type="text"
+            className="form-control"
+            placeholder="Search for movie..."
+            value={this.state.userInput}
+            onChange={this.updateSearchQuery}
+            />
+          <span className="input-group-btn">
+            <button className="btn btn-default"
+              type="button" onClick={this.handleSetQuery}
+              >Search</button>
+          </span>
         </div>
+      </div>
+    </div>
     );
   }
 });
