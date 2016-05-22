@@ -21,6 +21,6 @@ class MoviesController < ApplicationController
   private
   API_KEY = ENV['MOVIE_API_KEY']
   BASE_URL = "https://api.themoviedb.org/3";
-  BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+  BASE_IMAGE_URL = "https://image.tmdb.org/t/p/";
 
 end
