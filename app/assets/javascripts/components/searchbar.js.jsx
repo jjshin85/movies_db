@@ -24,7 +24,9 @@ var SearchBar = React.createClass({
             <button className="btn btn-default"
               id="search-button"
               type="button" onClick={this.handleSetQuery}
-              >Search</button>
+              ><span
+              className="glyphicon glyphicon-search"
+              ></span></button>
           </span>
         </div>
       </div>
