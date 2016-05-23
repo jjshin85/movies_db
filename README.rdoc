@@ -1,1 +1,3 @@
-App to practice react
+App to practice react and css.
+
+Check out the site at https://moviedbnetwork.herokuapp.com
