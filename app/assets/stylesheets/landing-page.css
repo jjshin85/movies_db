@@ -35,7 +35,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    margin-top: -10px;
+    margin-top: -10px; /*added to get rid of added margin from navbar*/
     background: url('in-the-mood-for-love.jpg') no-repeat center center;
     background-size: cover;
 }
