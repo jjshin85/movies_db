@@ -37,7 +37,7 @@ gem 'better_errors'
 
 gem 'httparty'
 
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
 # Use Unicorn as the app server
 # gem 'unicorn'
