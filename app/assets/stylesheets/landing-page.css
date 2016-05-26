@@ -36,7 +36,7 @@ h6 {
     text-align: center;
     color: #f8f8f8;
     margin-top: -10px; /*added to get rid of added margin from navbar*/
-    background: url('in-the-mood-for-love.jpg') no-repeat center center;
+    background: url('https://s3-us-west-1.amazonaws.com/moviedbnetwork/assets/images/in-the-mood-for-love-2.jpg') no-repeat center center;
     background-size: cover;
 }
 
