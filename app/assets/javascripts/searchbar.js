@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-    var searchbar = $('#searchbox');
+    var searchbar = $('#searchbar');
     searchbar.keyup(function(event){
-      if(event.keyCode == 13){
+      if(event.keyCode === 13){
           $("#search-button").click();
       }
     })
-    
+
 });
