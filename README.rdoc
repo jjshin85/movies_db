@@ -2,6 +2,6 @@ App to practice responsive design, front end frameworks, and fetching data from 
 
 Uses Ruby on Rails, React.js, CSS, and Bootstrap.
 
-Pulls information from [the Movie Database](https://www.themoviedb.org/).
+Pulls information from https://www.themoviedb.org/
 
 Check out the site at https://movieinformation.herokuapp.com
