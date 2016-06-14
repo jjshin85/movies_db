@@ -1,3 +1,7 @@
-App to practice react and css.
+App to practice responsive design, front end frameworks, and fetching data from 3rd-party APIs.
 
-Check out the site at https://moviedbnetwork.herokuapp.com
+Uses Ruby on Rails, React.js, CSS, and Bootstrap.
+
+Pulls information from <a href="https://www.themoviedb.org/">The Movie Database</a>
+
+Check out the site at https://movieinformation.herokuapp.com
