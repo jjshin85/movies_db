@@ -29,6 +29,11 @@ img {
   width: 280px;
 }
 
+.missing_image {
+  height: 280px;
+  width: 280px;
+}
+
 .background_overlay {
   position: absolute;
   top: 10px;
