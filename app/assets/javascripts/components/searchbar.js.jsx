@@ -21,13 +21,6 @@ var SearchBar = React.createClass({
             value={this.state.userInput}
             onChange={this.updateSearchQuery}
             />
-          <input type="password"
-              id="searchbox"
-              className="form-control"
-              placeholder="Search for movie..."
-              value={this.state.userInput}
-              onChange={this.updateSearchQuery}
-              />
           <span className="input-group-btn">
             <button className="btn btn-default"
               id="search-button"
