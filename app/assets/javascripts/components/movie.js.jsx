@@ -1,7 +1,11 @@
 var Movie = React.createClass({
     render: function(){
-      return (<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12" key={this.props.id} >
-                <div className='movie'>
+      return (
+        <a href={"/movies/" + this.props.id}>
+        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                   key={this.props.id}>
+                <div className='movie'
+                     data-id={this.props.id}>
                   <div className='background_overlay'></div>
                   <div className='image_container'>
                     <MovieImage backdropPath={this.props.backdrop_path} />
@@ -12,6 +16,7 @@ var Movie = React.createClass({
                     <p className="movie_overview">{this.props.overview}</p>
                   </div>
                 </div>
-              </div>)
+              </div>
+            </a>)
     }
 });
