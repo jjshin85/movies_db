@@ -2,7 +2,6 @@ body {
   font-family: "Helvetica";
 }
 
-
 .movie {
   overflow: hidden;
   height: 300px;
@@ -47,37 +46,35 @@ img {
 }
 
 .text_container {
+  /*display changed to 'display: flex' on mouseover in 'movies.js' file*/
   display: none;
+  flex-direction: column;
   height: 280px;
   width: 280px;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
   top: 10px;
+  overflow: scroll;
 }
+
 .movie_overview {
-  position: absolute;
   width: 280px;
   color: #ECECF0;
   padding: 10px;
   overflow: scroll;
-  height: 80%;
 }
 
-.title_area {
-  width: 280px;
-  margin: 5px;
-  position: absolute;
-  bottom: 0;
-  height: 20%;
-  overflow: hidden;
-  vertical-align: center;
-}
 .movie_title {
-  position: absolute;
-  bottom: 0;
   color: #ECECF0;
-  font-size: 1.3em;
+  font-size: 1.25em;
   text-shadow: 2px #646466;
-  margin-left: 5px;
+  margin: 10px;
+}
+
+.movie_info_divider {
+  border-bottom: solid;
+  border-color: #ECECF0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
