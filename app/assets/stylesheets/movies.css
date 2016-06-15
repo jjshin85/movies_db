@@ -4,8 +4,8 @@ body {
 
 .movie {
   overflow: hidden;
-  height: 300px;
-  width: 300px;
+  height: 211px;
+  width: 375px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -14,8 +14,8 @@ body {
 .image_container {
   position: absolute;
   top: 10px;
-  height: 280px;
-  width: 280px;
+  height: 211px;
+  width: 375px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -24,20 +24,20 @@ body {
 img {
   position: absolute;
   top: 0;
-  height: 420px;
-  width: 280px;
+  height: 211px;
+  width: 375px;
 }
 
 .missing_image {
-  height: 280px;
-  width: 280px;
+  height: 211px;
+  width: 375px;
 }
 
 .background_overlay {
   position: absolute;
   top: 10px;
-  height: 280px;
-  width: 280px;
+  height: 211px;
+  width: 375px;
   background-color: black;
   opacity: 0;
   margin-left: auto;
@@ -49,8 +49,8 @@ img {
   /*display changed to 'display: flex' on mouseover in 'movies.js' file*/
   display: none;
   flex-direction: column;
-  height: 280px;
-  width: 280px;
+  height: 211px;
+  width: 375px;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -59,7 +59,7 @@ img {
 }
 
 .movie_overview {
-  width: 280px;
+  width: 375px;
   color: #ECECF0;
   padding: 10px;
   overflow: scroll;
@@ -67,7 +67,7 @@ img {
 
 .movie_title {
   color: #ECECF0;
-  font-size: 1.25em;
+  font-size: 1.4em;
   text-shadow: 2px #646466;
   margin: 10px;
 }
