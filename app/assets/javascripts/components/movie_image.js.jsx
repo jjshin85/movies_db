@@ -1,3 +1,5 @@
+var NO_IMAGE_AVAILABLE_URL = "https://s3-us-west-1.amazonaws.com/moviedbnetwork/assets/images/noimageavailable.jpg";
+
 var MovieImage = React.createClass({
   getInitialState: function() {
     return { posterPath: this.props.posterPath }

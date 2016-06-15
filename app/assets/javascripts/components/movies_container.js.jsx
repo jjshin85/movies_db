@@ -1,10 +1,13 @@
 var MoviesContainer = React.createClass({
+
   getInitialState: function() {
     return { movies: this.props.movies }
   },
+
   setSearchQuery: function(input) {
     this.searchMovies(input);
   },
+
   searchMovies: function(input){
     var query;
     if(input != ""){
@@ -22,6 +25,7 @@ var MoviesContainer = React.createClass({
       });
     }
   },
+  
   render: function(){
     return (<div>
         <SearchBar setQuery={this.setSearchQuery}/>

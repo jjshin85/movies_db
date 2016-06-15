@@ -1,5 +1,4 @@
 var BASE_IMAGE_URL = "https://image.tmdb.org/t/p/";
-var NO_IMAGE_AVAILABLE_URL = "https://s3-us-west-1.amazonaws.com/moviedbnetwork/assets/images/noimageavailable.jpg"
 var image_size_sm = "w300";
 
 var Movie = React.createClass({
