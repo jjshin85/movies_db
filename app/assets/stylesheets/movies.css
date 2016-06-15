@@ -55,29 +55,21 @@ img {
   margin-right: auto;
   position: absolute;
   top: 10px;
+  overflow: scroll;
 }
+
 .movie_overview {
   width: 280px;
   color: #ECECF0;
   padding: 10px;
   overflow: scroll;
-  /*height: 80%;*/
 }
 
-.title_area {
-  width: 280px;
-  margin: 5px;
-  height: auto;
-  /*height: 20%;*/
-  overflow: hidden;
-  vertical-align: center;
-}
 .movie_title {
   color: #ECECF0;
   font-size: 1.25em;
   text-shadow: 2px #646466;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 10px;
 }
 
 .movie_info_divider {

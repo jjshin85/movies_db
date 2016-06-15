@@ -10,9 +10,7 @@ var Movie = React.createClass({
                     <MovieImage posterPath={this.props.poster_path} />
                   </div>
                   <div className='text_container'>
-                    <div className="title_area">
-                      <h4 className='movie_title'>{this.props.title}</h4>
-                    </div>
+                    <h4 className='movie_title'>{this.props.title}</h4>
                     <div className='movie_info_divider'></div>
                     <p className="movie_overview">{this.props.overview}</p>
                   </div>
