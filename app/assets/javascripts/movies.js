@@ -1,7 +1,11 @@
+var std_width = '375px';
+var std_height = '211px';
+var lrg_width = '450px';
+var lrg_height = '253px';
 $(document).ready(function(){
 
     onMovieHover();
-    
+
 });
 
 function onMovieHover(){
@@ -10,7 +14,6 @@ function onMovieHover(){
       var title = movie.children('.movie_title');
       var overview = movie.children('.movie_overview');
       var image_container = movie.children('.image_container');
-      // var image = movie.children('.movie_image');
       var text_container = movie.children('.text_container');
       var image = movie.children('.image_container').children('img');
       var overlay = movie.children('.background_overlay');
