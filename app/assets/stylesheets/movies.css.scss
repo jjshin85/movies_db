@@ -7,6 +7,12 @@ body {
   font-family: "Helvetica";
 }
 
+.col-sm-12, .col-xs-12{
+  .movie:hover {
+    transform: scale(1.0) !important;
+  }
+}
+
 .movie {
   overflow: hidden;
   height: $backdrop_img_height;
@@ -52,7 +58,7 @@ body {
 }
 
 .movie:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   .text_container {
     display: flex;
   }
