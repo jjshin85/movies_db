@@ -21,7 +21,7 @@ body {
   margin-right: auto;
   vertical-align: middle;
 }
-img {
+.movie_image {
   position: absolute;
   top: 0;
   height: 211px;
