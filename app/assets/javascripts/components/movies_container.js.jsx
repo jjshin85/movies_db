@@ -25,9 +25,10 @@ var MoviesContainer = React.createClass({
       });
     }
   },
-  
+
   render: function(){
-    return (<div>
+    return (
+      <div>
         <SearchBar setQuery={this.setSearchQuery}/>
         <MovieList movies={this.state.movies} />
       </div>);
