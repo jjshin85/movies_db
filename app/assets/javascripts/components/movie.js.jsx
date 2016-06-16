@@ -2,7 +2,7 @@ var Movie = React.createClass({
     render: function(){
       return (
         <a href={"/movies/" + this.props.id}>
-        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+        <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 movie"
                    key={this.props.id}>
                 <div className='movie'>
                   <div className='background_overlay'></div>
