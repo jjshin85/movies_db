@@ -6,9 +6,7 @@ var Movie = React.createClass({
                    key={this.props.id}>
                 <div className='movie'>
                   <div className='background_overlay'></div>
-                  <div className='image_container'>
-                    <BackdropImage backdropPath={this.props.backdrop_path} />
-                  </div>
+                  <BackdropImage backdropPath={this.props.backdrop_path} />
                   <div className='text_container'>
                     <h4 className='movie_title'>{this.props.title}</h4>
                     <div className='movie_info_divider'></div>

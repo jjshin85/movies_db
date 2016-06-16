@@ -1,10 +1,6 @@
-var std_width = '375px';
-var std_height = '211px';
-var lrg_width = '450px';
-var lrg_height = '253px';
 $(document).ready(function(){
 
-    onMovieHover();
+    // onMovieHover();
 
 });
 
