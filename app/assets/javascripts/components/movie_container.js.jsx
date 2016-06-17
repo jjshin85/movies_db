@@ -5,7 +5,11 @@ var MovieContainer = React.createClass({
 
     render: function(){
       console.log(this.state.movie);
-      return  <PosterImage posterPath={this.state.movie.poster_path}/>
-
+      return (
+        <div className="col-lg-4 col-md-6 col-sm-12">
+          <PosterImage posterPath={this.state.movie.poster_path}/>
+          <h3>{this.state.movie.title}</h3>
+        </div>
+      );
     }
 });

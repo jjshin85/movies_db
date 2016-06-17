@@ -21,6 +21,24 @@ h6 {
     font-weight: 700;
 }
 
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.social-buttons {
+  background-color: #75A4CA;
+}
+
+.resource-name {
+  color: #75A4CA;
+}
+.landing-sub-heading {
+  margin-top: 10px;
+}
 .intro_buttons {
   color: #428bca;
 }
@@ -87,13 +105,6 @@ h6 {
     .intro-divider {
         width: 100%;
     }
-}
-
-.network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
 }
 
 .content-section-a {
