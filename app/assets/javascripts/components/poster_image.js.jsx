@@ -1,4 +1,10 @@
-//global variables for images held within backdrop_image.js.jsx file
+//poster sizes:
+var xx_small = "w154";
+var x_small = "w185";
+var small = "w342";
+var med =  "w500";
+var lrg = "w780";
+var x_lrg = "original";
 
 var PosterImage = React.createClass({
   getInitialState: function() {
@@ -8,7 +14,7 @@ var PosterImage = React.createClass({
   render: function(){
       if(this.state.posterPath != null){
         return (
-          <img className='poster_image' src={ BASE_IMAGE_URL + IMAGE_SIZE_MED + this.state.posterPath }/>
+          <img className='poster-image' src={ BASE_IMAGE_URL + small + this.state.posterPath }/>
         );
       }
       else {

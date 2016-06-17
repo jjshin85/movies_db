@@ -7,7 +7,7 @@ body {
   font-family: "Helvetica";
 }
 
-.movie {
+.movie-thumb {
   overflow: hidden;
   height: $backdrop_img_height;
   width: $backdrop_img_width;
@@ -51,7 +51,7 @@ body {
       padding-right: 0 !important;
 }
 
-.movie:hover {
+.movie-thumb:hover {
   transform: scale(1.05);
   .text_container {
     display: flex;

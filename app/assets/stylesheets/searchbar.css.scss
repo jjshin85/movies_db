@@ -1,10 +1,11 @@
 .searchbar {
-  float: none;
+  float: none !important;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
 }
+
 .row {
   .col-sm-12, .col-xs-12, .searchbar {
     padding-left: -10px !important;
