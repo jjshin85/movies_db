@@ -7,12 +7,6 @@ body {
   font-family: "Helvetica";
 }
 
-.col-sm-12, .col-xs-12{
-  .movie:hover {
-    transform: scale(1.0) !important;
-  }
-}
-
 .movie {
   overflow: hidden;
   height: $backdrop_img_height;
@@ -78,7 +72,7 @@ body {
 .movie_overview {
   width: $backdrop_img_width;
   color: $light-color;
-  padding: 10px;
+  padding: 10px 15px 15px 15px;
   overflow: scroll;
 }
 
@@ -86,7 +80,7 @@ body {
   color: $light-color;
   font-size: 1.4em;
   text-shadow: 2px #646466;
-  margin: 10px;
+  margin: 15px 15px 10px 15px;
 }
 
 .movie_info_divider {

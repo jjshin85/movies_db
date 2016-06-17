@@ -1,12 +1,19 @@
 .col-xs-12, .col-sm-12 {
-
     .info-toggle {
       position: relative;
       float: right;
+      height: 100%;
       z-index: 10;
-      .span {
-        vertical-align: middle;
-      }
+
+        .info-toggle-button {
+          position: absolute;
+          top: 50%;
+          height: 211px;
+        }
+        .glyphicon-menu-left{
+          color: white;
+          vertical-align: middle;
+        }
     }
 
 }
