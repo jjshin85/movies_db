@@ -11,8 +11,8 @@ var SearchBar = React.createClass({
   },
   render: function(){
     return (
-      <div className="row">
-        <div className="searchbar col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <div className="searchbar-container">
+        <div className="searchbar col-lg-8 col-md-8 col-sm-11 col-xs-11">
           <div className="input-group">
             <input type="text"
               id="username"

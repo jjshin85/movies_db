@@ -1,7 +1,7 @@
 var MovieThumb = React.createClass({
     render: function(){
       return (
-        <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12"
+        <div className="thumb-container col-lg-4 col-md-6 col-sm-12 col-xs-12"
              key={this.props.id}>
             <a href={"/movies/" + this.props.id}>
                 <div className='movie-thumb'>
