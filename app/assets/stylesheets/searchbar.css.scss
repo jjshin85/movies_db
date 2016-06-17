@@ -4,11 +4,11 @@
   margin-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.row {
-  .col-sm-12, .col-xs-12, .searchbar {
-    padding-left: -10px !important;
-    padding-right: -10px !important;
-  }
+.searchbar-container {
+  display: flex;
+  flex-direction: row;
 }

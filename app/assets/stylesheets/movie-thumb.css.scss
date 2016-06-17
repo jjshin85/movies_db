@@ -6,7 +6,10 @@ $backdrop_img_width: 365px;
 body {
   font-family: "Helvetica";
 }
-
+.thumb-container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 .movie-thumb {
   overflow: hidden;
   height: $backdrop_img_height;
