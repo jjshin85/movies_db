@@ -1,9 +1,9 @@
-var Movie = React.createClass({
+var MovieThumb = React.createClass({
     render: function(){
       return (
-        <a href={"/movies/" + this.props.id}>
         <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12"
-                   key={this.props.id}>
+             key={this.props.id}>
+            <a href={"/movies/" + this.props.id}>
                 <div className='movie-thumb'>
                   <div className='background_overlay'></div>
                   <BackdropImage backdropPath={this.props.backdrop_path} />
@@ -13,7 +13,8 @@ var Movie = React.createClass({
                     <p className="movie_overview">{this.props.overview}</p>
                   </div>
                 </div>
-              </div>
-            </a>)
+              </a>
+          </div>
+      );
     }
 });

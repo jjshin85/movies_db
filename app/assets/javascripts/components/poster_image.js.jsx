@@ -14,7 +14,7 @@ var PosterImage = React.createClass({
   render: function(){
       if(this.state.posterPath != null){
         return (
-          <img className='poster_image' src={ BASE_IMAGE_URL + small + this.state.posterPath }/>
+          <img className='poster-image' src={ BASE_IMAGE_URL + small + this.state.posterPath }/>
         );
       }
       else {

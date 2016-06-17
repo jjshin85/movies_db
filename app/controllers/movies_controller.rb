@@ -16,9 +16,11 @@ class MoviesController < ApplicationController
   end
 
   def show
-    movie_id = params[:id]
-    url = "#{BASE_URL}/movie/#{movie_id}?#{API_KEY}"
+    url = "#{BASE_URL}/movie/#{params[:id]}?#{API_KEY}"
     @movie = HTTParty.get(url).parsed_response
+
+    credits_url = "#{BASE_URL}/movie/#{params[:id]}/credits?#{API_KEY}"
+    @credits = HTTParty.get(credits_url).parsed_response
   end
 
   private
