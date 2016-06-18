@@ -11,12 +11,12 @@ var BackdropImage = React.createClass({
   render: function(){
       if(this.state.backdropPath != null){
         return (
-          <img className='movie_image' src={ BASE_IMAGE_URL + med_size + this.state.backdropPath }/>
+          <img className='backdrop-image' src={ BASE_IMAGE_URL + med_size + this.state.backdropPath }/>
         );
       }
       else {
         return (
-          <img className='missing_image' src={ NO_IMAGE_AVAILABLE_URL } />
+          <img className='missing-image' src={ NO_IMAGE_AVAILABLE_URL } />
         );
       }
   }
