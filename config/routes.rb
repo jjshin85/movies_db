@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
-  resources :movies
-
-  resources :users do
-    resources :libraries
+  resources :movies, only: [:index, :show] do
+    resources :cast, only: :index
+    resources :crew, only: :index
   end
-
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
 
 end
