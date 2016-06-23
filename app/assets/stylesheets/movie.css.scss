@@ -38,15 +38,17 @@ $poster_max_width: 342px;
 .movie-title {
   margin-top: 5px;
 }
+.category-header {
+  margin-bottom: 5px !important;
+}
 .credits-list {
   padding-left: 0;
 }
 .credits-list li {
   list-style-type: none;
-  margin-left: 15px;
 }
 .credits-btn {
-  margin: 10px 10px 10px 15px;
+  margin: 5px 0px 10px;
   background-color: #428bca;
   box-shadow: 1px 1px 1px #888888;
 }
