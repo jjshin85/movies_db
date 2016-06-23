@@ -4,8 +4,48 @@ var MovieContainer = React.createClass({
                movie: this.props.movie,
                cast: this.props.credits.cast.slice(0,4),
                crew: this.props.credits.crew.slice(0,4),
-               release_date: this.props.movie.release_date.slice(0,4)
+               release_date: this.props.movie.release_date.slice(0,4),
+               showFullCast: false,
+               showFullCrew: false,
+               castToggleTxt: 'Show more',
+               crewToggleTxt: 'Show more'
               }
+    },
+
+    handleCastToggle: function(){
+      if(this.state.showFullCast === false){
+        this.setState({
+                        cast: this.props.credits.cast,
+                        showFullCast: true,
+                        castToggleTxt: 'Show less'
+                      });
+
+      }
+      else {
+        this.setState({
+                        cast: this.props.credits.cast.slice(0,4),
+                        showFullCast: false,
+                        castToggleTxt: 'Show more'
+                      });
+      }
+    },
+
+    handleCrewToggle: function(){
+      if(this.state.showFullCrew === false){
+        this.setState({
+                        crew: this.props.credits.crew,
+                        showFullCrew: true,
+                        crewToggleTxt: 'Show less'
+                      });
+
+      }
+      else {
+        this.setState({
+                        crew: this.props.credits.crew.slice(0,4),
+                        showFullCrew: false,
+                        crewToggleTxt: 'Show more'
+                      });
+      }
     },
 
     render: function(){
@@ -30,20 +70,16 @@ var MovieContainer = React.createClass({
             <ul className='credits-list'>
               <h5>Cast:</h5>
               <CreditList credits={this.state.cast} type="cast" showall='false'/>
-              <a href={"/movies/" + this.props.movie.id + "/cast" }>
-                <button className="btn btn-sm credits-btn">
-                  <span className='credits-btn-content'>Explore full cast</span>
-                </button>
-              </a>
+              <button className="btn btn-sm credits-btn" onClick={this.handleCastToggle}>
+                <span className='credits-btn-content'>{this.state.castToggleTxt}</span>
+              </button>
             </ul>
             <ul className='credits-list'>
               <h5>Crew:</h5>
               <CreditList credits={this.state.crew} type="crew" showall='false'/>
-              <a href={"/movies/" + this.props.movie.id + "/crew" }>
-                <button className="btn btn-sm credits-btn">
-                  <span className='credits-btn-content'>Explore full crew</span>
-                </button>
-              </a>
+              <button className="btn btn-sm credits-btn" onClick={this.handleCrewToggle}>
+                <span className='credits-btn-content'>{this.state.crewToggleTxt}</span>
+              </button>
             </ul>
           </div>
         </div>
