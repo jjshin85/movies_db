@@ -30,12 +30,20 @@ var MovieContainer = React.createClass({
             <ul className='credits-list'>
               <h5>Cast:</h5>
               <CreditList credits={this.state.cast} type="cast" showall='false'/>
-              <a href={"/movies/" + this.props.movie.id + "/cast" }><button>Explore full cast</button></a>
+              <a href={"/movies/" + this.props.movie.id + "/cast" }>
+                <button className="btn btn-sm credits-btn">
+                  <span className='credits-btn-content'>Explore full cast</span>
+                </button>
+              </a>
             </ul>
             <ul className='credits-list'>
               <h5>Crew:</h5>
               <CreditList credits={this.state.crew} type="crew" showall='false'/>
-              <a href={"/movies/" + this.props.movie.id + "/crew" }><button>Explore full crew</button></a>
+              <a href={"/movies/" + this.props.movie.id + "/crew" }>
+                <button className="btn btn-sm credits-btn">
+                  <span className='credits-btn-content'>Explore full crew</span>
+                </button>
+              </a>
             </ul>
           </div>
         </div>

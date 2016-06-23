@@ -35,7 +35,7 @@ $poster_max_width: 342px;
   margin-right: auto;
   max-width: 450px;
 }
-.movie-title{
+.movie-title {
   margin-top: 5px;
 }
 .credits-list {
@@ -43,4 +43,20 @@ $poster_max_width: 342px;
 }
 .credits-list li {
   list-style-type: none;
+  margin-left: 15px;
+}
+.credits-btn {
+  margin: 10px 10px 10px 15px;
+  background-color: #428bca;
+  box-shadow: 1px 1px 1px #888888;
+}
+.credits-btn:hover {
+  background-color: #75A4CA;
+}
+.credits-btn-content {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: white;
 }
