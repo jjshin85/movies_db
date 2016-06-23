@@ -28,12 +28,17 @@ h6 {
     letter-spacing: 2px;
     color: white;
 }
-
 .social-buttons {
+  background-color: #428bca;
+}
+.social-buttons:hover {
   background-color: #75A4CA;
 }
 
 .resource-name {
+  color: #428bca;
+}
+.resource-name:hover {
   color: #75A4CA;
 }
 .landing-sub-heading {
