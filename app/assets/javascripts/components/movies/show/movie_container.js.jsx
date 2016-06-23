@@ -64,18 +64,18 @@ var MovieContainer = React.createClass({
                 + " (" + this.state.release_date + ")" }</h3>
             <p className="overview">{this.state.movie.overview}</p>
             <ul className='credits-list'>
-              <h5>Genre:</h5>
+              <h5 className='category-header'>Genre:</h5>
               {genres}
             </ul>
             <ul className='credits-list'>
-              <h5>Cast:</h5>
+              <h5 className='category-header'>Cast:</h5>
               <CreditList credits={this.state.cast} type="cast" showall='false'/>
               <button className="btn btn-sm credits-btn" onClick={this.handleCastToggle}>
                 <span className='credits-btn-content'>{this.state.castToggleTxt}</span>
               </button>
             </ul>
             <ul className='credits-list'>
-              <h5>Crew:</h5>
+              <h5 className='category-header'>Crew:</h5>
               <CreditList credits={this.state.crew} type="crew" showall='false'/>
               <button className="btn btn-sm credits-btn" onClick={this.handleCrewToggle}>
                 <span className='credits-btn-content'>{this.state.crewToggleTxt}</span>
