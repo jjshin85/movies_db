@@ -1,7 +1,8 @@
 var BASE_IMAGE_URL = "https://image.tmdb.org/t/p/";
 var small_size = "w300";
 var med_size = "w780";
-var NO_IMAGE_AVAILABLE_URL = "https://s3-us-west-1.amazonaws.com/moviedbnetwork/assets/images/noimageavailable.jpg";
+var NO_IMAGE_AVAILABLE_URL = "https://s3-us-west-1.amazonaws.com/moviedbnetwork/assets/images/no-image-available.jpg";
+var NO_IMAGE_AVAILABLE__SQUARE_URL = "https://s3-us-west-1.amazonaws.com/moviedbnetwork/assets/images/noimageavailable.jpg";
 
 var BackdropImage = React.createClass({
   getInitialState: function() {
@@ -16,7 +17,7 @@ var BackdropImage = React.createClass({
       }
       else {
         return (
-          <img className='missing-image' src={ NO_IMAGE_AVAILABLE_URL } />
+          <img className='backdrop-image' src={ NO_IMAGE_AVAILABLE_URL } />
         );
       }
   }
