@@ -1,6 +1,6 @@
 App to practice responsive design, front end frameworks, and fetching data from 3rd-party APIs.
 
-Uses Ruby on Rails, React.js, CSS, and Bootstrap.
+Uses Ruby on Rails, React.js, CSS, Sass, and Bootstrap.
 
 Pulls information from https://www.themoviedb.org/
 
