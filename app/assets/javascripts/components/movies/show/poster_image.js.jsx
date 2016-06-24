@@ -1,3 +1,4 @@
+//Constant variables are located in backdrop-image.js.jsx file
 //poster sizes:
 var xx_small = "w154";
 var x_small = "w185";
@@ -19,7 +20,7 @@ var PosterImage = React.createClass({
       }
       else {
         return (
-          <img className='missing_image' src={ NO_IMAGE_AVAILABLE_URL } />
+          <img className='missing_image' src={ NO_IMAGE_AVAILABLE__SQUARE_URL } />
         );
       }
   }
